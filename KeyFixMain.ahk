@@ -6,6 +6,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 NumpadAdd:: Send, {Backspace}
 NumpadMult:: Send, {Right}
 NumpadSub:: Send, {Volume_Down}
+Numpad0::send,% ["0",")"] [1+GetKeyState("Shift","p")]
 
 #If GetKeyBoardLanguage(WinExist("A")) = 0x0422 or GetKeyboardLanguage(WinExist("A")) = 0x0419
 Numpad1 & Numpad2::Send,% ["з","З"][1+GetKeyState("Shift","p")]
